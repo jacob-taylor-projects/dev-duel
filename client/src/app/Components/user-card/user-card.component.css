@@ -1,0 +1,68 @@
+.card-outline{
+    display: flex;
+    border: 1px solid lightslategray;
+    width: 500px;
+    height:345px;
+    border-radius: 20px;
+    padding:30px;
+    margin:30px;
+}
+.avatar-pic {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .avatar-pic > img {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+  }
+
+  .bio {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 16px;
+    font-size: 13px;
+  }
+  .user-data {
+    margin-left: 35px;
+  }
+  
+  .user-data span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 35px;
+  }
+  
+  .user-data span button {
+    width: 7.5rem;
+    height: 1.5rem;
+    margin-right: 10px;
+    background-color: rgb(81, 191, 227);
+    border-radius: 0.3rem;
+    border: 1px solid grey;
+  }
+  .winner{
+    display: flex;
+    justify-content: space-around;
+    color: green;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 0;
+  }
+  .loser{
+    display: flex;
+    justify-content: space-around;
+    color: red;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 0;
+  }

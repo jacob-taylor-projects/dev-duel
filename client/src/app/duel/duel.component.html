@@ -19,3 +19,19 @@
   <br />
   <button class="submit-button" (click)="onSubmit()">Duel</button>
 </div>
+<div class="container">
+  <div class="container-1" *ngIf="user1['total-stars']!+
+  user1['public-repos']!+user1.followers!>user2['total-stars']!+
+  user2['public-repos']!+user2.followers!
+  ">
+<app-user-card [user]="user1" [count]="2"></app-user-card>
+<app-user-card [user]="user2" [count]="1"></app-user-card>
+</div>
+<div class="container-2" *ngIf="user1['total-stars']!+
+user1['public-repos']!+user1.followers!<=user2['total-stars']!+
+user2['public-repos']!+user2.followers!
+">
+<app-user-card [user]="user1" [count]="1"></app-user-card>
+<app-user-card [user]="user2" [count]="2"></app-user-card>
+  </div>
+</div>

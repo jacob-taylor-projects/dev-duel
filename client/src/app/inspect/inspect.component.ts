@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { UserService } from 'src/user.service';
+import { User, UserService } from 'src/user.service';
 
 @Component({
   selector: 'app-inspect',
@@ -7,7 +7,7 @@ import { UserService } from 'src/user.service';
   styleUrls: ['./inspect.component.css']
 })
 export class InspectComponent implements OnInit {
-
+  user:User={};
   username: string = ""
 
 
@@ -21,7 +21,12 @@ export class InspectComponent implements OnInit {
   }
 
   onSubmit() {
-    this.userService.inspectUser(this.username);
+    this.userService.inspectUser(this.username).subscribe({
+      next:(data)=>{
+        this.user=data;
+      },
+      error:()=>alert('Invalid Username')
+    })
   }
 
 

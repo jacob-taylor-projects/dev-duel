@@ -1,0 +1,62 @@
+<div class="winner" *ngIf="count===2">
+<p>🏆Winner! 🏁</p>
+</div>
+<div class="loser" *ngIf="count===1">
+<p>😢Loser!</p>
+</div>
+<div class="card-outline">
+<div class="avatar-pic">
+    <img src="{{user.avatar_url}}" *ngIf="user.avatar_url" else defaultAvatar alt=""/>
+
+    <div class="bio">
+{{user.bio}}
+</div>
+</div>
+<div class="user-data">
+    <span *ngIf="user.username as e">
+        <button>username</button>
+        <p>{{ e }}</p>
+      </span>
+      <span *ngIf="user.name as e">
+        <button>name</button>
+        <p>{{ e }}</p>
+      </span>
+      <span *ngIf="user.location as e">
+        <button>location</button>
+        <p>{{ e }}</p>
+      </span>
+      <span *ngIf="user.titles as e">
+        <button>titles</button>
+        <p>{{ e }}</p>
+      </span>
+      <span *ngIf="user['favorite-language'] as e">
+        <button>fav language</button>
+        <p>{{ e }}</p>
+      </span>
+      <span *ngIf="user['total-stars']! > -1">
+        <button>total stars</button>
+        <p>{{ user["total-stars"] }}</p>
+      </span>
+      <span *ngIf="user['highest-starred']! > -1">
+        <button>highest star count</button>
+        <p>{{ user["highest-starred"] }}</p>
+      </span>
+      <span *ngIf="user['public-repos']! > -1">
+        <button>public repos</button>
+        <p>{{ user["public-repos"] }}</p>
+      </span>
+      <span *ngIf="user['perfect-repos']! > -1">
+        <button>perfect repos</button>
+        <p>{{ user["perfect-repos"] }}</p>
+      </span>
+      <span *ngIf="user.followers! > -1">
+        <button>followers</button>
+        <p>{{ user.followers }}</p>
+      </span>
+      <span *ngIf="user.following! > -1">
+        <button>following</button>
+        <p>{{ user.following }}</p>
+      </span>
+</div>
+</div>
+
